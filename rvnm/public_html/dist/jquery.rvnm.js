@@ -8,7 +8,8 @@
 
 
         this.each(function () {
-
+            $(this).addClass('rvnm-navbar-box');
+            $(settings.wrapper).addClass('rvnm-wrapper');
         });
 
 

@@ -1,0 +1,27 @@
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.rvnm-navbar-box{
+    position: absolute;
+    left: 0px;
+    top:0;
+    width: 220px;
+    background: #f4f4f4 ;
+    min-height: 50vh;
+}
+
+.rvnm-wrapper{
+    margin-left: 220px;
+    background: lightskyblue ; /* demo */
+}
+
+.rvnm-navbar-box ul {
+    padding: 0;
+}
+
+.rvnm-navbar-box ul li{
+    padding: 7px;
+    background: silver ;
+}
