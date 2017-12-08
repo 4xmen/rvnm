@@ -10,6 +10,7 @@ body{
     width: 220px;
     background: #f4f4f4 ;
     min-height: 50vh;
+    overflow-y: hidden;
 }
 
 .rvnm-wrapper{
@@ -19,6 +20,8 @@ body{
 
 .rvnm-navbar-box ul {
     padding: 0;
+    margin: 0;
+    position: relative;
 }
 
 .rvnm-navbar-box ul li{
