@@ -11,20 +11,61 @@ body{
     background: #f4f4f4 ;
     min-height: 50vh;
     overflow-y: hidden;
+    z-index: 99;
 }
 
 .rvnm-wrapper{
     margin-left: 220px;
     background: lightskyblue ; /* demo */
+    padding: 1em; /* demo */
 }
 
+
 .rvnm-navbar-box ul {
+    list-style: none;
     padding: 0;
     margin: 0;
     position: relative;
 }
 
 .rvnm-navbar-box ul li{
-    padding: 7px;
     background: silver ;
+    border-bottom:1px solid gray;
+}
+
+.rvnm-navbar-box ul li ul{
+    overflow: hidden;
+    display: none;
+    padding-left: 15px;
+}
+
+.rvnm-navbar-box .fa{
+   font-size: 16px;
+}
+.rvnm-navbar-box a{
+    text-decoration: none;
+}
+
+.rvnm-navbar-box ul li a{
+    display: block;
+    padding: 10px;
+}
+.rvnm-navbar-box ul li span.spliter{
+    display: block;
+    padding: 10px;
+    /*text-align: center;*/
+}
+.rvnm-navbar-box ul li.rvnm-expandable{
+    background-image: url(img/rb.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 10px;
+}
+
+.rvnm-navbar-box ul li.rvnm-collapseable{
+    background-image: url(img/db.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 10px;
+}
+.rvnm-navbar-box ul li.rvnm-collapseable > ul{
+    
 }
