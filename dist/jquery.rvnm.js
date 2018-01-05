@@ -7,7 +7,14 @@
             wrapper: '#wrapper'
         }, options);
 
+        this.sizetrigger = function () {
+            $(".rvnm-navbar-box").css('height', '');
+            if ($(".rvnm-navbar-box").height() < $("body").height()) {
+                $(".rvnm-navbar-box").height($('body').height());
+            }
+        }
 
+        var self = this;
 
 
         this.each(function () {
@@ -18,11 +25,11 @@
 
 
             // resize navbar box
-            $(".rvnm-navbar-box").height($('body').height());
+            self.sizetrigger();
 
             // add triger windows resize
             $(window).bind('resize', function () {
-                $(".rvnm-navbar-box").height($('body').height());
+                self.sizetrigger();
             });
 
             $(document).on('click', '.rvnm-expandable > a', function (e) {
@@ -30,6 +37,7 @@
                     return false;
                 $(this).parent().addClass('rvnm-collapseable').removeClass('rvnm-expandable');
                 $(this).parent().find('> ul').slideDown(300);
+                self.sizetrigger();
                 if ($(this).attr('href') == '#') {
                     return false;
                 }
@@ -40,6 +48,7 @@
                     return false;
                 $(this).parent().addClass('rvnm-expandable').removeClass('rvnm-collapseable');
                 $(this).parent().find('> ul').slideUp(300);
+                self.sizetrigger();
                 if ($(this).attr('href') == '#') {
                     return false;
                 }
