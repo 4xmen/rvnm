@@ -12,6 +12,9 @@
             if ($(".rvnm-navbar-box").height() < $("body").height()) {
                 $(".rvnm-navbar-box").height($('body').height());
             }
+            if ($(".rvnm-navbar-box").height() < $(window).height()) {
+                $(".rvnm-navbar-box").height($(window).height());
+            }
         };
 
         var self = this;
