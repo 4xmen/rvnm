@@ -10,7 +10,7 @@
         <script type="text/javascript" src="../dist/jquery.rvnm.js"></script>
     </head>
     <body>
-        <nav id="navbar" class="rvnm-minimal">
+        <nav id="navbar" class="">
             <ul>
                 <li>
                     <span class="spliter">
@@ -256,7 +256,9 @@
         </div>
         <script type="text/javascript">
             $(function () {
-                $("#navbar").rvnm();
+                $("#navbar").rvnm({
+                    mode: 'minimal'
+                });
             });
         </script>
     </body>

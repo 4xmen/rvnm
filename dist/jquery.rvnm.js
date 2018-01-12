@@ -4,9 +4,11 @@
     $.fn.rvnm = function (options) {
 
         var settings = $.extend({
-            wrapper: '#wrapper'
+            wrapper: '#wrapper',
+            mode: 'default'
         }, options);
 
+        console.log(settings);
         this.sizetrigger = function () {
             $(".rvnm-navbar-box").css('height', '');
             if ($(".rvnm-navbar-box").height() < $("body").height()) {
@@ -24,8 +26,10 @@
 
             $(this).find('li:has(> ul)').addClass('rvnm-expandable');
             $(settings.wrapper).addClass('rvnm-wrapper');
-            if ($(this).hasClass('rvnm-minimal')) {
+            if ($(this).hasClass('rvnm-minimal') || settings.mode === 'minimal') {
                 $(settings.wrapper).addClass('rvnm-minimal');
+                $(this).addClass('rvnm-minimal');
+                settings.mode = 'minimal';
             }
 
 
