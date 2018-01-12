@@ -16,7 +16,6 @@
 
         var self = this;
 
-
         this.each(function () {
             $(this).addClass('rvnm-navbar-box');
 
