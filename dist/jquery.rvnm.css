@@ -40,7 +40,7 @@ body{
 }
 
 .rvnm-navbar-box .fa{
-   font-size: 16px;
+    font-size: 16px;
 }
 .rvnm-navbar-box a{
     text-decoration: none;
@@ -49,12 +49,19 @@ body{
 .rvnm-navbar-box ul li a{
     display: block;
     padding: 10px;
+    font-size: 14px;
 }
 .rvnm-navbar-box ul li span.spliter{
     display: block;
     padding: 10px;
+    font-size: 14px;
     /*text-align: center;*/
 }
+
+.rvnm-navbar-box li .fa{
+    margin-right: 10px;
+}
+
 .rvnm-navbar-box ul li.rvnm-expandable{
     background-image: url(img/rb.png) ;
     background-repeat: no-repeat;
@@ -67,14 +74,14 @@ body{
     background-position: 95% 10px;
 }
 .rvnm-navbar-box ul li.rvnm-collapseable > ul{
-    
+
 }
 
 
 /*minmal mode*/
 
 .rvnm-minimal{
-    
+
 }
 
 .rvnm-navbar-box.rvnm-minimal{
@@ -87,13 +94,42 @@ body{
 }
 
 
-.rvnm-navbar-box.rvnm-minimal li{
+.rvnm-navbar-box.rvnm-minimal > li{
     text-align: center;
 }
 .rvnm-navbar-box.rvnm-minimal li > a,.rvnm-navbar-box.rvnm-minimal li > .spliter{
     font-size: 0;
 }
 
-.rvnm-navbar-box.rvnm-minimal li.rvnm-expandable{
-    background-image: none;
+.rvnm-navbar-box.rvnm-minimal > ul > li.rvnm-expandable{
+    background-image: none ;
+}
+
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand{
+    width: 240px;
+    height: 36px;
+    overflow: visible;
+    position: relative;
+}
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand  a,.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand  .spliter{
+    font-size: 14px;
+}
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > a,.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > .spliter{
+    background: rgba(0,0,0,0.2) ;
+}
+
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand .fa{
+    margin-right: 20px;
+}
+
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > ul{
+    display: block;
+    z-index: 9;
+    position: absolute;
+    left:40px;
+    padding-left: 0;
+    top:100%;
+    width: 200px;
+    padding-top: 1px;
+    border-left: 1px solid;
 }

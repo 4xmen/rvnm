@@ -24,7 +24,7 @@
             if ($(this).hasClass('rvnm-minimal')) {
                 $(settings.wrapper).addClass('rvnm-minimal');
             }
-            
+
 
 
             // resize navbar box
@@ -62,6 +62,18 @@
                 if ($(this).attr('href') == '#') {
                     return false;
                 }
+            });
+
+
+            $(document).on('mouseenter', '.rvnm-navbar-box.rvnm-minimal  li', function (e) {
+                if ($(this).closest('.rvnm-minimal-expand').length === 0) {
+                    $(this).addClass('rvnm-minimal-expand');
+                }
+            });
+            $(document).on('mouseleave', '.rvnm-navbar-box.rvnm-minimal  li.rvnm-minimal-expand', function (e) {
+                $(".rvnm-minimal-expand .rvnm-collapseable ul").slideUp();
+                $(".rvnm-minimal-expand .rvnm-collapseable").addClass('rvnm-expandable').removeClass('rvnm-collapseable');
+                $(this).removeClass('rvnm-minimal-expand');
             });
 
 
