@@ -21,6 +21,10 @@
 
             $(this).find('li:has(> ul)').addClass('rvnm-expandable');
             $(settings.wrapper).addClass('rvnm-wrapper');
+            if ($(this).hasClass('rvnm-minimal')) {
+                $(settings.wrapper).addClass('rvnm-minimal');
+            }
+            
 
 
             // resize navbar box

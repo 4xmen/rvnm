@@ -8,7 +8,7 @@ body{
     left: 0px;
     top:0;
     width: 220px;
-    background: #f4f4f4 ;
+    background: #333333 ;
     min-height: 50vh;
     overflow-y: hidden;
     z-index: 99;
@@ -68,4 +68,32 @@ body{
 }
 .rvnm-navbar-box ul li.rvnm-collapseable > ul{
     
+}
+
+
+/*minmal mode*/
+
+.rvnm-minimal{
+    
+}
+
+.rvnm-navbar-box.rvnm-minimal{
+    width: 40px;
+    overflow: visible;
+}
+
+.rvnm-wrapper.rvnm-minimal{
+    margin-left: 40px;
+}
+
+
+.rvnm-navbar-box.rvnm-minimal li{
+    text-align: center;
+}
+.rvnm-navbar-box.rvnm-minimal li > a,.rvnm-navbar-box.rvnm-minimal li > .spliter{
+    font-size: 0;
+}
+
+.rvnm-navbar-box.rvnm-minimal li.rvnm-expandable{
+    background-image: none;
 }
