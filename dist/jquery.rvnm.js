@@ -38,8 +38,10 @@
                     $(".rvnm-collapseable > a").click();
                 }
                 $(this).parent().addClass('rvnm-collapseable').removeClass('rvnm-expandable');
-                $(this).parent().find('> ul').slideDown(300);
-                self.sizetrigger();
+                $(this).parent().find('> ul').slideDown(300, function () {
+                    self.sizetrigger();
+                });
+
                 if ($(this).attr('href') == '#') {
                     return false;
                 }
@@ -49,8 +51,10 @@
                 if (e.target !== e.currentTarget)
                     return false;
                 $(this).parent().addClass('rvnm-expandable').removeClass('rvnm-collapseable');
-                $(this).parent().find('> ul').slideUp(300);
-                self.sizetrigger();
+                $(this).parent().find('> ul').slideUp(300, function () {
+                    self.sizetrigger();
+                });
+
                 if ($(this).attr('href') == '#') {
                     return false;
                 }
