@@ -12,7 +12,7 @@
             if ($(".rvnm-navbar-box").height() < $("body").height()) {
                 $(".rvnm-navbar-box").height($('body').height());
             }
-        }
+        };
 
         var self = this;
 
@@ -34,6 +34,9 @@
             $(document).on('click', '.rvnm-expandable > a', function (e) {
                 if (e.target !== e.currentTarget)
                     return false;
+                if ($(this).parent().closest('.rvnm-collapseable').length === 0) {
+                    $(".rvnm-collapseable > a").click();
+                }
                 $(this).parent().addClass('rvnm-collapseable').removeClass('rvnm-expandable');
                 $(this).parent().find('> ul').slideDown(300);
                 self.sizetrigger();
