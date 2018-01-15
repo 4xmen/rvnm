@@ -1,0 +1,64 @@
+.rvnm-navbar-box{
+    direction: rtl;
+    left: auto ;
+    right:0 ;
+}
+
+.rvnm-wrapper{
+    margin-left: 0;
+    margin-right: 220px;
+}
+
+.rvnm-navbar-box ul li ul{
+    padding-left: 0;
+    padding-right: 15px;
+}
+.rvnm-navbar-box li .fa{
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.rvnm-navbar-box ul li.rvnm-expandable{
+    background-image: url(img/lb.png) ;
+    background-position: 5% 10px;
+}
+
+.rvnm-navbar-box ul li.rvnm-collapseable{
+    background-position: 5% 10px;
+}
+
+
+/*minmal mode*/
+
+.rvnm-wrapper.rvnm-minimal{
+    margin-right: 40px;
+    margin-left: 0;
+}
+
+
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand .fa{
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > ul{
+    left:auto;
+    right:40px;
+    padding-right: 0;
+    border-right: 1px solid;
+    border-left: 0;
+}
+
+/*mobile mode*/
+.rvnm-navbar-box.rvnm-mobile{
+    right: 0px;
+    left: auto;
+}
+
+.rvnm-wrapper.rvnm-mobile{
+    margin-right: 0;
+}
+
+.rvnm-navbar-box.rvnm-mobile.rvnm-mobile-expand{
+    background-position: 97% 5px;
+}
