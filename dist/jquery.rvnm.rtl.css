@@ -28,7 +28,7 @@
 }
 
 
-/*minmal mode*/
+/* minmal mode */
 
 .rvnm-wrapper.rvnm-minimal{
     margin-right: 40px;
@@ -49,7 +49,7 @@
     border-left: 0;
 }
 
-/*mobile mode*/
+/* mobile mode */
 .rvnm-navbar-box.rvnm-mobile{
     right: 0px;
     left: auto;
@@ -64,7 +64,7 @@
 }
 
 
-/*dark theme*/
+/* dark theme */
 
 .rvnm-navbar-box.dark ul li.rvnm-expandable{
     background-image: url(img/lw.png) ;
@@ -76,13 +76,13 @@
     background-position: 10px 15px;
 }
 
-/*Dark theme minimal mode*/
+/* Dark theme minimal mode */
 .rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > ul{
     border-right: 0;
 }
 
 
-/*Dark theme mobile mode*/
+/* Dark theme mobile mode */
 .rvnm-navbar-box.rvnm-mobile.dark.rvnm-mobile-expand{
     background-position: 97% 5px;
 }
