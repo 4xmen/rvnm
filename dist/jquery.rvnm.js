@@ -11,7 +11,8 @@
         var settings = $.extend({
             wrapper: '#wrapper', // main page wrapper
             mode: 'default', // mode of menu (default = desktop| minimal = tablet | mobile)
-            responsive: true // repsonsve mode only work in default mode
+            responsive: true, // repsonsve mode only work in default mode
+            theme: ''
         }, options);
 
         /**
@@ -71,6 +72,12 @@
         this.each(function () {
             // add rvnm-navbar-box to menu
             $(this).addClass('rvnm-navbar-box');
+
+            // add theme if extis
+            if (settings.theme !== '') {
+                $(this).addClass(settings.theme);
+            }
+
             // add expandable class to li's has ul child
             $(this).find('li:has(> ul)').addClass('rvnm-expandable');
             // rvnm-wrapper class to main content element
