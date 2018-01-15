@@ -8,7 +8,7 @@ body{
     left: 0px;
     top:0;
     width: 220px;
-    background: #333333 ;
+    background: #A0AEC4 ;
     min-height: 50vh;
     overflow-y: hidden;
     z-index: 99;
@@ -29,14 +29,22 @@ body{
 }
 
 .rvnm-navbar-box ul li{
-    background: silver ;
-    border-bottom:1px solid gray;
+    background: #eee ;
+    border-bottom:1px solid #e0e0e0;
+}
+
+.rvnm-navbar-box ul li:hover{
+    background: #A0AEC4 ;
+}
+
+.rvnm-navbar-box ul li.rvnm-collapseable{
+    background: #e1e1e1;
 }
 
 .rvnm-navbar-box ul li ul{
     overflow: hidden;
     display: none;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 .rvnm-navbar-box .fa{
@@ -46,15 +54,25 @@ body{
     text-decoration: none;
 }
 
-.rvnm-navbar-box ul li a{
+.rvnm-navbar-box ul li a,.rvnm-navbar-box ul li a:visited{
     display: block;
     padding: 10px;
     font-size: 14px;
+    font-weight: 100;
+    color: #333 ;
 }
+
+.rvnm-navbar-box ul li:hover a,.rvnm-navbar-box ul li:hover a:visited{
+    color: #000;
+}
+
 .rvnm-navbar-box ul li span.spliter{
     display: block;
     padding: 10px;
     font-size: 14px;
+    font-weight: 600;
+    background: #eaeaea ;
+    color: #1d4686;
     /*text-align: center;*/
 }
 
@@ -131,7 +149,7 @@ body{
     top:100%;
     width: 200px;
     padding-top: 1px;
-    border-left: 1px solid;
+    border-left: 1px solid #e0e0e0;
 }
 
 /*mobile mode*/
