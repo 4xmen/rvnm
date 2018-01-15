@@ -26,7 +26,7 @@
                 if ($(window).width() > 450 && $(window).width() < 768) {
                     if (!$(self).hasClass('rvnm-minimal')) {
                         // fix extended  after switch from defualt to minimal
-                        $(self).find('.rvnm-collapseable ul').attr('style','');
+                        $(self).find('.rvnm-collapseable ul').attr('style', '');
                         $(self).find('.rvnm-collapseable').addClass('rvnm-expandable').removeClass('rvnm-collapseable');
                     }
                     $(settings.wrapper).removeClass('rvnm-mobile');
@@ -101,11 +101,19 @@
                 // check click only this element
                 if (e.target !== e.currentTarget)
                     return false;
+
+                // check is first level of li child and minimal mode siable
+                if ($(this).parent().hasClass('rvnm-minimal-expand')) {
+                    return false;
+                }
+
                 // check is first level of li child 
                 // try to close other expanded items
                 if ($(this).parent().closest('.rvnm-collapseable').length === 0) {
                     $(".rvnm-collapseable > a").click();
                 }
+
+
                 // add collapseable class to parent of link and remove expandable
                 $(this).parent().addClass('rvnm-collapseable').removeClass('rvnm-expandable');
                 // slide down first level ul 
