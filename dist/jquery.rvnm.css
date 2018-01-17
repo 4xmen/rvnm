@@ -323,3 +323,91 @@ body{
 .rvnm-navbar-box.rvnm-mobile.dark.rvnm-mobile-expand  ul {
     background-color: #393a48 ;
 }
+
+
+/* Dark ruby theme */
+.rvnm-navbar-box.dark-ruby{
+    background: #353C48 ;
+}
+
+.rvnm-navbar-box.dark-ruby ul li{
+    background: #353C48 ;
+    border-bottom: 0 ;
+}
+
+.rvnm-navbar-box.dark-ruby ul li:hover,.rvnm-navbar-box.dark-ruby ul li.rvnm-collapseable{
+    background-color: #f0544c;
+}
+.rvnm-navbar-box.dark-ruby ul li a,.rvnm-navbar-box.dark-ruby ul li a:visited,.rvnm-navbar-box.dark-ruby ul li span.spliter{
+    background: transparent  ;
+    color: rgb(150, 162, 180);
+    padding-top: 15px ;
+    padding-bottom: 15px;
+}
+
+.rvnm-navbar-box.dark-ruby ul li span.spliter{
+    opacity: .60;
+}
+
+.rvnm-navbar-box.dark-ruby ul li span.spliter:hover{
+    color: #fff;
+}
+
+.rvnm-navbar-box.dark-ruby ul li:hover a,.rvnm-navbar-box.dark-ruby ul li:hover a:visited{
+    color: #ffffff;
+}
+
+
+.rvnm-navbar-box.dark-ruby ul li.rvnm-expandable{
+    background-image: url(img/rw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+
+.rvnm-navbar-box.dark-ruby ul li.rvnm-collapseable{
+    background-image: url(img/dw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+ /*Dark ruby theme minimal*/
+ .rvnm-navbar-box.rvnm-minimal.dark-ruby .rvnm-minimal-expand{
+     height: 46px;
+ }
+.rvnm-navbar-box.rvnm-minimal.dark-ruby .rvnm-minimal-expand > a,.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > .spliter{
+    /*background: rgba(0,0,0,0.2) ;*/
+}
+.rvnm-navbar-box.rvnm-minimal.dark-ruby ul li:hover,.rvnm-navbar-box.rvnm-minimal ul li.rvnm-collapseable{
+    background-color: #f0544c ;
+    border-bottom: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-ruby > ul > li{
+    background-image: none !important;
+}
+
+.rvnm-navbar-box.rvnm-minimal.dark-ruby .rvnm-minimal-expand > ul{
+    top:100%;
+    background-color: #f0544c ;
+    border-left: 0;
+    padding-top: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-ruby ul li ul li{
+    background-color: #393a48 ;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-ruby ul li ul li:hover{
+    /*background-color: rgba(0,0,0,0.2);*/
+}
+
+/*Dark ruby theme mobile mode*/
+
+.rvnm-navbar-box.rvnm-mobile.dark-ruby{
+    background: #393a48 url(img/mw.png) center no-repeat ;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-ruby.rvnm-mobile-expand{
+    background: #393a48 url(img/cw.png) no-repeat ;
+    background-position: 5px 5px;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-ruby.rvnm-mobile-expand  ul {
+    background-color: #393a48 ;
+}
