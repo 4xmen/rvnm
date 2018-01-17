@@ -373,9 +373,7 @@ body{
  .rvnm-navbar-box.rvnm-minimal.dark-ruby .rvnm-minimal-expand{
      height: 46px;
  }
-.rvnm-navbar-box.rvnm-minimal.dark-ruby .rvnm-minimal-expand > a,.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > .spliter{
-    /*background: rgba(0,0,0,0.2) ;*/
-}
+
 .rvnm-navbar-box.rvnm-minimal.dark-ruby ul li:hover,.rvnm-navbar-box.rvnm-minimal ul li.rvnm-collapseable{
     background-color: #f0544c ;
     border-bottom: 0;
@@ -393,9 +391,7 @@ body{
 .rvnm-navbar-box.rvnm-minimal.dark-ruby ul li ul li{
     background-color: #393a48 ;
 }
-.rvnm-navbar-box.rvnm-minimal.dark-ruby ul li ul li:hover{
-    /*background-color: rgba(0,0,0,0.2);*/
-}
+
 
 /*Dark ruby theme mobile mode*/
 
