@@ -161,11 +161,11 @@
                     top: y + 'px',
                     left: x + 'px'
                 }).addClass("rvnm-rippleEffect");
-                
-                setTimeout(function(){
+
+                setTimeout(function () {
                     $(".rvnm-ripple").remove();
-                },600);
-                
+                }, 600);
+
             });
 
             // add click event to expandable link 
@@ -182,7 +182,10 @@
                 // check is first level of li child 
                 // try to close other expanded items
                 if ($(this).parent().closest('.rvnm-collapseable').length === 0) {
-                    $(".rvnm-collapseable > a").click();
+                    // slide up first level ul of this
+                    $(".rvnm-collapseable > a").parent().find('> ul').slideUp(300);
+                    // add expandable class to parent of link and remove collapseable
+                    $(".rvnm-collapseable > a").parent().addClass('rvnm-expandable').removeClass('rvnm-collapseable');
                 }
 
 
