@@ -19,7 +19,8 @@
  * @link       https://github.com/4xmen/rvnm
  */
 
-;(function ($) {
+;
+(function ($) {
 
     $.fn.rvnm = function (options) {
 
@@ -121,6 +122,50 @@
             // add triger windows resize
             $(window).bind('resize.rvnm', function () {
                 self.sizetrigger();
+            });
+
+
+            /**
+             * ripple effect for links
+             */
+            $(document).on('click', '.rvnm-navbar-box ul li a', function (e) {
+                // Remove any old one
+                $(".rvnm-ripple").remove();
+
+                // Setup
+                var posX = $(this).offset().left,
+                        posY = $(this).offset().top,
+                        buttonWidth = $(this).width(),
+                        buttonHeight = $(this).height();
+
+                // Add the element
+                $(this).prepend("<span class='rvnm-ripple'></span>");
+
+
+                // Make it round!
+                if (buttonWidth >= buttonHeight) {
+                    buttonHeight = buttonWidth;
+                } else {
+                    buttonWidth = buttonHeight;
+                }
+
+                // Get the center of the element
+                var x = e.pageX - posX - buttonWidth / 2;
+                var y = e.pageY - posY - buttonHeight / 2;
+
+
+                // Add the ripples CSS and start the animation
+                $(".rvnm-ripple").css({
+                    width: buttonWidth,
+                    height: buttonHeight,
+                    top: y + 'px',
+                    left: x + 'px'
+                }).addClass("rvnm-rippleEffect");
+                
+                setTimeout(function(){
+                    $(".rvnm-ripple").remove();
+                },600);
+                
             });
 
             // add click event to expandable link 

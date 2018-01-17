@@ -23,6 +23,29 @@ body{
     padding: 0;
     margin: 0;
 }
+
+
+/* ripple */
+.rvnm-ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+.rvnm-rippleEffect {
+    animation: rvnm-rippleDrop .6s linear;
+}
+
+@keyframes rvnm-rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 .rvnm-navbar-box{
     position: absolute;
     left: 0px;
@@ -80,6 +103,8 @@ body{
     font-size: 14px;
     font-weight: 100;
     color: #333 ;
+    position: relative;
+    overflow: hidden;
 }
 
 .rvnm-navbar-box ul li:hover a,.rvnm-navbar-box ul li:hover a:visited{
