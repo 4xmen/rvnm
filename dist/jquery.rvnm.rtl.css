@@ -109,7 +109,7 @@
 }
 
 
-/* dark rubby theme */
+/* dark ruby theme */
 
 .rvnm-navbar-box.dark-ruby ul li.rvnm-expandable{
     background-image: url(img/lw.png) ;
@@ -129,6 +129,31 @@
 
 /* Dark theme mobile mode */
 .rvnm-navbar-box.rvnm-mobile.dark-ruby.rvnm-mobile-expand{
+    background-position: 97% 5px;
+}
+
+
+
+/* dark beryl theme */
+
+.rvnm-navbar-box.dark-beryl ul li.rvnm-expandable{
+    background-image: url(img/lw.png) ;
+    background-position: 10px 15px;
+}
+
+.rvnm-navbar-box.dark-beryl ul li.rvnm-collapseable{
+    background-image: url(img/dw.png) ;
+    background-position: 10px 15px;
+}
+
+/* Dark theme minimal mode */
+.rvnm-navbar-box.rvnm-minimal .rvnm-minimal-expand > ul{
+    border-right: 0;
+}
+
+
+/* Dark theme mobile mode */
+.rvnm-navbar-box.rvnm-mobile.dark-beryl.rvnm-mobile-expand{
     background-position: 97% 5px;
 }
 

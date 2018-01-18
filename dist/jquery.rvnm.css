@@ -343,6 +343,7 @@ body{
     color: rgb(150, 162, 180);
     padding-top: 15px ;
     padding-bottom: 15px;
+    font-weight: 700;
 }
 
 .rvnm-navbar-box.dark-ruby ul li span.spliter{
@@ -405,5 +406,89 @@ body{
 }
 
 .rvnm-navbar-box.rvnm-mobile.dark-ruby.rvnm-mobile-expand  ul {
+    background-color: #393a48 ;
+}
+
+
+/* Dark beryl theme */
+.rvnm-navbar-box.dark-beryl{
+    background: #353C48 ;
+}
+
+.rvnm-navbar-box.dark-beryl ul li{
+    background: #353C48 ;
+    border-bottom: 0 ;
+}
+
+.rvnm-navbar-box.dark-beryl ul li:hover,.rvnm-navbar-box.dark-beryl ul li.rvnm-collapseable{
+    background-color: #0fd1ab;
+}
+.rvnm-navbar-box.dark-beryl ul li a,.rvnm-navbar-box.dark-beryl ul li a:visited,.rvnm-navbar-box.dark-beryl ul li span.spliter{
+    background: transparent  ;
+    color: #eee;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+}
+
+.rvnm-navbar-box.dark-beryl ul li span.spliter{
+    opacity: .60;
+}
+
+.rvnm-navbar-box.dark-beryl ul li span.spliter:hover{
+    color: #fff;
+}
+
+.rvnm-navbar-box.dark-beryl ul li:hover a,.rvnm-navbar-box.dark-beryl ul li:hover a:visited{
+    color: #ffffff;
+}
+
+
+.rvnm-navbar-box.dark-beryl ul li.rvnm-expandable{
+    background-image: url(img/rw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+
+.rvnm-navbar-box.dark-beryl ul li.rvnm-collapseable{
+    background-image: url(img/dw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+ /*Dark beryl theme minimal*/
+ .rvnm-navbar-box.rvnm-minimal.dark-beryl .rvnm-minimal-expand{
+     height: 46px;
+ }
+
+.rvnm-navbar-box.rvnm-minimal.dark-beryl ul li:hover,.rvnm-navbar-box.rvnm-minimal ul li.rvnm-collapseable{
+    background-color: #0fd1ab ;
+    border-bottom: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-beryl > ul > li{
+    background-image: none !important;
+}
+
+.rvnm-navbar-box.rvnm-minimal.dark-beryl .rvnm-minimal-expand > ul{
+    top:100%;
+    background-color: #0fd1ab ;
+    border-left: 0;
+    padding-top: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-beryl ul li ul li{
+    background-color: #393a48 ;
+}
+
+
+/*Dark beryl theme mobile mode*/
+
+.rvnm-navbar-box.rvnm-mobile.dark-beryl{
+    background: #393a48 url(img/mw.png) center no-repeat ;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-beryl.rvnm-mobile-expand{
+    background: #393a48 url(img/cw.png) no-repeat ;
+    background-position: 5px 5px;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-beryl.rvnm-mobile-expand  ul {
     background-color: #393a48 ;
 }
