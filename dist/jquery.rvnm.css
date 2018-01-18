@@ -19,6 +19,7 @@
  * @author     A1Gard <a1gard@4xmen.ir>
  * @link       https://github.com/4xmen/rvnm
  */
+
 body{
     padding: 0;
     margin: 0;
@@ -490,5 +491,89 @@ body{
 }
 
 .rvnm-navbar-box.rvnm-mobile.dark-beryl.rvnm-mobile-expand  ul {
+    background-color: #393a48 ;
+}
+
+
+/* Dark doder theme */
+.rvnm-navbar-box.dark-doder{
+    background: #353C48 ;
+}
+
+.rvnm-navbar-box.dark-doder ul li{
+    background: #353C48 ;
+    border-bottom: 0 ;
+}
+
+.rvnm-navbar-box.dark-doder ul li:hover,.rvnm-navbar-box.dark-doder ul li.rvnm-collapseable{
+    background-color: #4285f4;
+}
+.rvnm-navbar-box.dark-doder ul li a,.rvnm-navbar-box.dark-doder ul li a:visited,.rvnm-navbar-box.dark-doder ul li span.spliter{
+    background: transparent  ;
+    color: #eee;
+    padding-top: 15px ;
+    padding-bottom: 15px;
+}
+
+.rvnm-navbar-box.dark-doder ul li span.spliter{
+    opacity: .60;
+}
+
+.rvnm-navbar-box.dark-doder ul li span.spliter:hover{
+    color: #fff;
+}
+
+.rvnm-navbar-box.dark-doder ul li:hover a,.rvnm-navbar-box.dark-doder ul li:hover a:visited{
+    color: #ffffff;
+}
+
+
+.rvnm-navbar-box.dark-doder ul li.rvnm-expandable{
+    background-image: url(img/rw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+
+.rvnm-navbar-box.dark-doder ul li.rvnm-collapseable{
+    background-image: url(img/dw.png) ;
+    background-repeat: no-repeat;
+    background-position: 95% 15px;
+}
+ /*Dark doder theme minimal*/
+ .rvnm-navbar-box.rvnm-minimal.dark-doder .rvnm-minimal-expand{
+     height: 46px;
+ }
+
+.rvnm-navbar-box.rvnm-minimal.dark-doder ul li:hover,.rvnm-navbar-box.rvnm-minimal ul li.rvnm-collapseable{
+    background-color: #4285f4 ;
+    border-bottom: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-doder > ul > li{
+    background-image: none !important;
+}
+
+.rvnm-navbar-box.rvnm-minimal.dark-doder .rvnm-minimal-expand > ul{
+    top:100%;
+    background-color: #4285f4 ;
+    border-left: 0;
+    padding-top: 0;
+}
+.rvnm-navbar-box.rvnm-minimal.dark-doder ul li ul li{
+    background-color: #393a48 ;
+}
+
+
+/*Dark doder theme mobile mode*/
+
+.rvnm-navbar-box.rvnm-mobile.dark-doder{
+    background: #393a48 url(img/mw.png) center no-repeat ;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-doder.rvnm-mobile-expand{
+    background: #393a48 url(img/cw.png) no-repeat ;
+    background-position: 5px 5px;
+}
+
+.rvnm-navbar-box.rvnm-mobile.dark-doder.rvnm-mobile-expand  ul {
     background-color: #393a48 ;
 }
