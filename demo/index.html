@@ -15,11 +15,13 @@
         <!--js run code-->
         <script type="text/javascript">
             $(function () {
-                $("#navbar").rvnm({
+                var rvnMenu = $("#navbar").rvnm({
 //                    mode: 'mobile',
 //                    responsive: false,
                     theme: 'dark-lesb'
                 });
+                console.log(rvnMenu);
+                rvnMenu.setMode('minimal');
             });
         </script>
     </head>

@@ -248,7 +248,30 @@
 
         });
 
-
+        return {
+            settings: settings,
+            setMode: function (mode) {
+                $(settings.wrapper).removeClass('rvnm-mobile');
+                $(self).removeClass('rvnm-mobile');
+                $(settings.wrapper).removeClass('rvnm-minimal');
+                $(self).removeClass('rvnm-minimal');
+                settings.responsive = false;
+                if (mode === 'default') {
+                    return true;
+                }
+                if (mode === 'minimal') {
+                    $(settings.wrapper).addClass('rvnm-minimal');
+                    $(self).addClass('rvnm-minimal');
+                    return true;
+                }
+                if (mode === 'mobile') {
+                    $(settings.wrapper).addClass('rvnm-mobile');
+                    $(self).addClass('rvnm-mobile');
+                    return true;
+                }
+            },
+            $this: this
+        };
 
 
     };
