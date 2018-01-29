@@ -256,6 +256,8 @@
                 $(settings.wrapper).removeClass('rvnm-minimal');
                 $(self).removeClass('rvnm-minimal');
                 settings.responsive = false;
+                settings.mode = mode ;
+                
                 if (mode === 'default') {
                     return true;
                 }
