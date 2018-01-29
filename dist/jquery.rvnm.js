@@ -272,6 +272,15 @@
                     return true;
                 }
             },
+            setTheme: function (theme) {
+                $(self).removeClass('dark');
+                $(self).removeClass('dark-lesb');
+                $(self).removeClass('dark-doder');
+                $(self).removeClass('dark-beryl');
+                $(self).removeClass('dark-ruby');
+                $(self).addClass(theme);
+                settings.theme = theme ;
+            },
             $this: this
         };
 
