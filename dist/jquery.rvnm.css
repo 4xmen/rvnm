@@ -20,9 +20,10 @@
  * @link       https://github.com/4xmen/rvnm
  */
 
-body{
+body,html{
     padding: 0;
     margin: 0;
+    height: auto;
 }
 
 
@@ -60,8 +61,6 @@ body{
 
 .rvnm-wrapper{
     margin-left: 220px;
-    background: gray ; /* for demo */
-    padding: 1em; /* for demo */
 }
 
 
@@ -106,6 +105,10 @@ body{
     color: #333 ;
     position: relative;
     overflow: hidden;
+    height: 45px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 .rvnm-navbar-box ul li:hover a,.rvnm-navbar-box ul li:hover a:visited{
@@ -215,6 +218,7 @@ body{
     -webkit-transition:.6s;
     transition:.6s;
     background: #fff url(img/mb.png) center no-repeat ;
+    z-index: 9999;
 }
 
 .rvnm-navbar-box.rvnm-mobile:hover{
