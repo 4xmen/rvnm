@@ -74,13 +74,8 @@
             }
             $(".rvnm-navbar-box").css('height', '');
             if (settings.mode !== 'mobile' && !$(self).hasClass('rvnm-mobile')) {
-                if ($(".rvnm-navbar-box").height() < $("body").height() || $("body").height() < $(window).height()) {
-                    if ($("body").height() > $(window).height()) {
-                        $(".rvnm-navbar-box").height(Math.max($('body').height(),$('window').height()));
-                    } else {
-                        $(".rvnm-navbar-box").height($(window).height());
-                    }
-
+                if ($(".rvnm-navbar-box").height() < $("body").height() || $(".rvnm-navbar-box").height() < $(window).height() || $(".rvnm-navbar-box").height() <  $("html").height()  ) {
+                    $(".rvnm-navbar-box").height(Math.max($('body').height(),$(window).height(),$("html").height()));
                 }
             }
 
