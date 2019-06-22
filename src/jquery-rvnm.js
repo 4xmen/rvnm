@@ -26,18 +26,19 @@
 
 
         /**
-         * settings ofplgin 
+         * settings ofplgin
          * @type Object
          */
         var settings = $.extend({
             wrapper: '#wrapper', // main page wrapper
             mode: 'default', // mode of menu (default = desktop| minimal = tablet | mobile)
             responsive: true, // repsonsve mode only work in default mode
-            theme: ''
+            theme: '',
+            searchable: false,
         }, options);
 
         /**
-         * sizetrigger is function to change nav box size 
+         * sizetrigger is function to change nav box size
          * or control reponsive & mode of menu
          * @returns {undefined}
          */
@@ -74,8 +75,8 @@
             }
             $(".rvnm-navbar-box").css('height', '');
             if (settings.mode !== 'mobile' && !$(self).hasClass('rvnm-mobile')) {
-                if ($(".rvnm-navbar-box").height() < $("body").height() || $(".rvnm-navbar-box").height() < $(window).height() || $(".rvnm-navbar-box").height() <  $("html").height()  ) {
-                    $(".rvnm-navbar-box").height(Math.max($('body').height(),$(window).height(),$("html").height()));
+                if ($(".rvnm-navbar-box").height() < $("body").height() || $(".rvnm-navbar-box").height() < $(window).height() || $(".rvnm-navbar-box").height() < $("html").height()) {
+                    $(".rvnm-navbar-box").height(Math.max($('body').height(), $(window).height(), $("html").height()));
                 }
             }
 
@@ -88,6 +89,10 @@
         this.each(function () {
             // add rvnm-navbar-box to menu
             $(this).addClass('rvnm-navbar-box');
+
+            if (settings.searchable){
+                $(this).find('> ul').prepend('<li class="search"> <i class="fa fa-search"></i> <input type="search" placeholder="Search..." />  </li>');
+            }
 
             // add theme if extis
             if (settings.theme !== '') {
@@ -129,9 +134,9 @@
 
                 // Setup
                 var posX = $(this).offset().left,
-                        posY = $(this).offset().top,
-                        buttonWidth = $(this).width(),
-                        buttonHeight = $(this).height();
+                    posY = $(this).offset().top,
+                    buttonWidth = $(this).width(),
+                    buttonHeight = $(this).height();
 
                 // Add the element
                 $(this).prepend("<span class='rvnm-ripple'></span>");
