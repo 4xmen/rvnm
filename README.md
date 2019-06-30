@@ -1,6 +1,8 @@
 # What is rvnm
 Responsive vertical navigation menu same as wordpress menu, with search and themes.
-#How use it?
+
+![A Screenshot ]( /rvnm.gif?raw=true "Screen shot")
+# How use it?
 With package manager:
 ````
 npm i rvnm
@@ -10,6 +12,9 @@ or
 yarn add rvnm
 ````
 
+or use dist file of repo.
+
+HTML:
 ```html
  <nav id="navbar" class="">
     <ul>
@@ -18,117 +23,6 @@ yarn add rvnm
                 <i class="fa fa-cart-plus"></i>
                 Aliquam dictum
             </span>
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-bell-o"></i>
-                eleifend risus
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        suscipit mauris
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        sed placerat ipsum
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Proin turpis
-                    </a>
-                </li>
-
-            </ul>
-
-        </li>
-        <li class="">
-            <a href="#">  
-                <i class="fa fa-bullhorn"></i>
-                bibendum dapibus
-            </a>
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-building"></i>
-                Proin nonummy
-            </a>
-        </li>
-        <li>
-            <span class="spliter">
-                <i class="fa fa-bars"></i>
-                 Nullam non diam
-            </span>
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-align-center"></i>
-                platea dictumst
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        lacus at augue
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        pede felis
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        dignissim leo
-                    </a>
-                </li>
-
-            </ul>
-
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-amazon"></i>
-                second
-            </a>
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-apple"></i>
-                third
-            </a>
-        </li>
-        <li>
-            <span class="spliter">
-                <i class="fa fa-desktop"></i>
-                splliter teest
-            </span>
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-expand"></i>
-                quis lectus
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        Nunc sed lacus
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Pellentesque
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                         malesuada nulla
-                    </a>
-                </li>
-
-            </ul>
-
         </li>
         <li>
             <a href="#">  
@@ -193,37 +87,6 @@ yarn add rvnm
                 Maecenas fermentum
             </span>
         </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-yoast"></i>
-                sunt in culpa
-            </a>
-            <ul>
-                <li>
-                    <a href="#">
-                        officia deserunt
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                         mollit anim id
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                         id est laborum
-                    </a>
-                </li>
-
-            </ul>
-
-        </li>
-        <li>
-            <a href="#">  
-                <i class="fa fa-bank"></i>
-                Aenean magna nisl
-            </a>
-        </li>
     </ul>
 </nav>
 ```
@@ -238,10 +101,10 @@ $(function () {
 });
 ```
 
-#DEMO (example)
+# DEMO (example)
  
  You can watch /demo of project.
- 
+
  
  Online demo:
  
@@ -252,15 +115,15 @@ $(function () {
  http://4xmen.ir/github_example/rvnm/demo/index-rtl.html
  
  
-#option and events
+# option and events
 
-###`wrapper`
+### `wrapper`
  is main body of site default is `#wrapper`
  
- ###`mode`
+ ### `mode`
  mode of menu can be (default = desktop| minimal = tablet | mobile)
  
- ###`theme`
+ ### `theme`
  theme of the menu default is `""` and this a light theme other themes:
  - `dark`
  - `dark-lesb` dark & pink
@@ -268,11 +131,11 @@ $(function () {
  - `dark-beryl` dark & green
  - `dark-ruby` dark & red
  
- ###`searchable` 
+ ### `searchable` 
  
  you can use searchable menu but default is `false`
  
- #screenshot
+ # screenshot
  
 ![A Screenshot ]( /screenshot.png?raw=true "Screen shot")
 
