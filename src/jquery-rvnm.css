@@ -99,11 +99,14 @@ body,html{
 
 .rvnm-navbar-box .search{
     padding: 4px;
+    height: 25px;
+    max-height: 25px;
 }
 
 .rvnm-navbar-box .search .fa{
     margin-left: 7px;
-    margin-right: 3px;
+    margin-right: 3px !important;
+    margin-top: 4px;
 }
 
 .rvnm-navbar-box .search input{

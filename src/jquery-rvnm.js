@@ -90,8 +90,8 @@
             // add rvnm-navbar-box to menu
             $(this).addClass('rvnm-navbar-box');
 
-            if (settings.searchable){
-                $(this).find('> ul').prepend('<li class="search"> <i class="fa fa-search"></i> <input type="search" placeholder="Search..." />  </li>');
+            if (settings.searchable) {
+                $(this).find('> ul').prepend('<li class="search"> <i class="fa fa-search"></i> <input class="rvnm-search" type="search" placeholder="Search..." />  </li>');
             }
 
             // add theme if extis
@@ -199,6 +199,24 @@
                 // if href is # link should not be work
                 if ($(this).attr('href') === '#') {
                     return false;
+                }
+            });
+
+            $(document).on('keyup', '.rvnm-search', function (e) {
+                var word = $(this).val();
+                if (word.length == 0) {
+                    $(this).closest('ul').find('> li').show();
+                } else {
+                    $(this).closest('ul').find('> li').each(function () {
+                        if (!$(this).hasClass('search')) {
+                            $(this).show();
+                            var txt = $(this).text();
+                            if (txt.indexOf(word) == -1) {
+                                $(this).hide();
+                            }
+                        }
+                    });
+                    self.sizetrigger();
                 }
             });
 
