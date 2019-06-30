@@ -202,7 +202,7 @@
                 }
             });
 
-            $(document).on('keyup', '.rvnm-search', function (e) {
+            $(document).on('keyup mouseup change', '.rvnm-search', function (e) {
                 var word = $(this).val();
                 if (word.length == 0) {
                     $(this).closest('ul').find('> li').show();

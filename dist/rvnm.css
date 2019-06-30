@@ -309,6 +309,28 @@ body,html{
     text-decoration: none;
 }
 
+.rvnm-navbar-box .search{
+    padding: 4px;
+    height: 25px;
+    max-height: 25px;
+}
+
+.rvnm-navbar-box .search .fa{
+    margin-left: 7px;
+    margin-right: 3px !important;
+    margin-top: 4px;
+}
+
+.rvnm-navbar-box .search input{
+    padding: 6px;
+    background: transparent;
+    border: none;
+    width: calc(100% - 40px);
+    outline: 0;
+    box-sizing: border-box;
+}
+
+
 .rvnm-navbar-box ul li a,.rvnm-navbar-box ul li a:visited{
     display: block;
     padding: 10px;
@@ -321,6 +343,9 @@ body,html{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing:border-box;
+    line-height: 1.75em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .rvnm-navbar-box ul li:hover a,.rvnm-navbar-box ul li:hover a:visited{
@@ -361,6 +386,19 @@ body,html{
 
 .rvnm-minimal{
 
+}
+
+.rvnm-minimal .search input {
+    display: none;
+}
+
+.rvnm-minimal .search:hover input{
+    display: inline-block;
+    width: calc(100% - 45px);
+}
+.rvnm-minimal .search input:focus {
+    display: inline-block;
+    width: calc(100% - 45px);
 }
 
 .rvnm-navbar-box.rvnm-minimal{
@@ -467,6 +505,10 @@ body,html{
     background: #353C48 ;
     border-bottom: 0 ;
 }
+.rvnm-navbar-box.dark .fa, .rvnm-navbar-box.dark .search input {
+    color: #eee;
+}
+/*.rvnm-navbar-box.dark ul li*/
 
 .rvnm-navbar-box.dark ul li:hover,.rvnm-navbar-box.dark ul li.rvnm-collapseable{
     background-color: rgba(0, 0, 0, 0.07) ;
@@ -550,6 +592,10 @@ body,html{
 .rvnm-navbar-box.dark-ruby ul li{
     background: #353C48 ;
     border-bottom: 0 ;
+}
+
+.rvnm-navbar-box.dark-ruby .fa, .rvnm-navbar-box.dark-ruby  .search input  {
+    color: #eee;
 }
 
 .rvnm-navbar-box.dark-ruby ul li:hover,.rvnm-navbar-box.dark-ruby ul li.rvnm-collapseable{
@@ -637,6 +683,10 @@ body,html{
     border-bottom: 0 ;
 }
 
+.rvnm-navbar-box.dark-beryl .fa, .rvnm-navbar-box.dark-beryl  .search input {
+    color: #eee;
+}
+
 .rvnm-navbar-box.dark-beryl ul li:hover,.rvnm-navbar-box.dark-beryl ul li.rvnm-collapseable{
     background-color: #0fd1ab;
 }
@@ -721,6 +771,11 @@ body,html{
     border-bottom: 0 ;
 }
 
+.rvnm-navbar-box.dark-doder .fa, .rvnm-navbar-box.dark-doder  .search input  {
+    color: #eee;
+}
+
+
 .rvnm-navbar-box.dark-doder ul li:hover,.rvnm-navbar-box.dark-doder ul li.rvnm-collapseable{
     background-color: #4285f4;
 }
@@ -804,6 +859,12 @@ body,html{
     background: #353C48 ;
     border-bottom: 0 ;
 }
+
+.rvnm-navbar-box.dark-lesb .fa, .rvnm-navbar-box.dark-lesb  .search input  {
+    color: #eee;
+}
+
+
 
 .rvnm-navbar-box.dark-lesb ul li:hover,.rvnm-navbar-box.dark-lesb ul li.rvnm-collapseable{
     background-color: #f442b3;
