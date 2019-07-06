@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.0.0
+ *  rvnm - v1.1.1
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
