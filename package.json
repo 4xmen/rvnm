@@ -37,5 +37,14 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
     "jquery": "^1.10.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-concat-css": "^0.3.2",
+    "grunt-contrib-coffee": "^2.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }
