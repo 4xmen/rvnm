@@ -120,7 +120,11 @@
             self.sizetrigger();
 
             // add triger windows resize
-            $(window).bind('resize.rvnm', function () {
+            $window = $(window);
+            $window.on('scroll', function () {
+                self.sizetrigger();
+            });
+            $window.on('resize', function () {
                 self.sizetrigger();
             });
 
@@ -168,7 +172,7 @@
 
             });
 
-            // add click event to expandable link 
+            // add click event to expandable link
             $(document).on('click', '.rvnm-expandable > a', function (e) {
                 // check click only this element
                 if (e.target !== e.currentTarget)
@@ -179,7 +183,7 @@
                     return false;
                 }
 
-                // check is first level of li child 
+                // check is first level of li child
                 // try to close other expanded items
                 if ($(this).parent().closest('.rvnm-collapseable').length === 0) {
                     // slide up first level ul of this
@@ -191,7 +195,7 @@
 
                 // add collapseable class to parent of link and remove expandable
                 $(this).parent().addClass('rvnm-collapseable').removeClass('rvnm-expandable');
-                // slide down first level ul 
+                // slide down first level ul
                 $(this).parent().find('> ul').slideDown(300, function () {
                     // then use size triger
                     self.sizetrigger();
@@ -221,7 +225,7 @@
             });
 
 
-            // add click event to collapseable link 
+            // add click event to collapseable link
             $(document).on('click', '.rvnm-collapseable > a', function (e) {
                 // check click only this element
                 if (e.target !== e.currentTarget)
@@ -248,22 +252,22 @@
                 $(this).toggleClass('rvnm-mobile-expand');
             });
 
-            // on mouseenter when menu is minimal 
+            // on mouseenter when menu is minimal
             $(document).on('mouseenter', '.rvnm-navbar-box.rvnm-minimal  li', function (e) {
-                // if menu is first level li 
+                // if menu is first level li
                 if ($(this).closest('.rvnm-minimal-expand').length === 0) {
                     // show menu
                     $(this).addClass('rvnm-minimal-expand');
                 }
             });
-            // on mouseleave when menu is minimal 
+            // on mouseleave when menu is minimal
             $(document).on('mouseleave', '.rvnm-navbar-box.rvnm-minimal  li.rvnm-minimal-expand', function (e) {
                 $(".rvnm-minimal-expand .rvnm-collapseable ul").slideUp();
                 $(".rvnm-minimal-expand .rvnm-collapseable").addClass('rvnm-expandable').removeClass('rvnm-collapseable');
                 $(this).removeClass('rvnm-minimal-expand');
             });
 
-            $(window).load(function () {
+            $(window).on('load',function () {
                 setTimeout(function () {
                     self.sizetrigger();
                 }, 100);
