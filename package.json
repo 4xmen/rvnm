@@ -1,6 +1,6 @@
 {
   "name": "rvnm",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Responsive vertical navigation menu",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,12 @@
   "bugs": {
     "url": "https://github.com/4xmen/rvnm/issues"
   },
+  "files": [
+    "dist/*",
+    "dist/img/*",
+    "src/*",
+    "LICENSE"
+  ],
   "homepage": "https://github.com/4xmen/rvnm#readme",
   "devDependenciesnpm": {
     "grunt": "^1.0.4",
