@@ -246,7 +246,7 @@
 
             // click an nav box when has rvnm-mobile class
             $(document).on('click', '.rvnm-mobile', function (e) {
-                if (e.target !== e.currentTarget)
+                if (e.target !== e.currentTarget && e.target.tagName != 'A')
                     return false;
                 // try to expand menu
                 $(this).toggleClass('rvnm-mobile-expand');

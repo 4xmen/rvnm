@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.1.4
+ *  rvnm - v1.2.1
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
@@ -254,7 +254,7 @@
 
             // click an nav box when has rvnm-mobile class
             $(document).on('click', '.rvnm-mobile', function (e) {
-                if (e.target !== e.currentTarget)
+                if (e.target !== e.currentTarget && e.target.tagName != 'A')
                     return false;
                 // try to expand menu
                 $(this).toggleClass('rvnm-mobile-expand');
