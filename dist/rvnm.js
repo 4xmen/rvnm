@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.2.1
+ *  rvnm - v1.3.0
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
@@ -69,7 +69,7 @@
                 if ($(window).width() <= 450) {
                     $(settings.wrapper).removeClass('rvnm-minimal');
                     $(self).removeClass('rvnm-minimal');
-                    $(settings.wrapper).addClass('rvnm-mobile');
+                    $(settings.wrapper).addClass('rvnm-mobile-wrapper');
                     $(self).addClass('rvnm-mobile');
                 }
                 // if window size greater than 768 active desktop mode by
