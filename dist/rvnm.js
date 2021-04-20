@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.3.0
+ *  rvnm - v1.3.1
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
@@ -60,7 +60,7 @@
                         $(self).find('.rvnm-collapseable ul').attr('style', '');
                         $(self).find('.rvnm-collapseable').addClass('rvnm-expandable').removeClass('rvnm-collapseable');
                     }
-                    $(settings.wrapper).removeClass('rvnm-mobile');
+                    $(settings.wrapper).removeClass('rvnm-mobile-wrapper');
                     $(self).removeClass('rvnm-mobile');
                     $(settings.wrapper).addClass('rvnm-minimal');
                     $(self).addClass('rvnm-minimal');
@@ -77,7 +77,7 @@
                 if ($(window).width() >= 768) {
                     $(settings.wrapper).removeClass('rvnm-minimal');
                     $(self).removeClass('rvnm-minimal');
-                    $(settings.wrapper).removeClass('rvnm-mobile');
+                    $(settings.wrapper).removeClass('rvnm-mobile-wrapper');
                     $(self).removeClass('rvnm-mobile');
                 }
             }
@@ -119,7 +119,7 @@
             }
             // check if mobile mode active change mode
             if ($(this).hasClass('rvnm-minimal') || settings.mode === 'mobile') {
-                $(settings.wrapper).addClass('rvnm-mobile');
+                $(settings.wrapper).addClass('rvnm-mobile-wrapper');
                 $(this).addClass('rvnm-mobile');
                 settings.mode = 'mobile';
             }
@@ -286,7 +286,7 @@
         return {
             settings: settings,
             setMode: function (mode) {
-                $(settings.wrapper).removeClass('rvnm-mobile');
+                $(settings.wrapper).removeClass('rvnm-mobile-wrapper');
                 $(self).removeClass('rvnm-mobile');
                 $(settings.wrapper).removeClass('rvnm-minimal');
                 $(self).removeClass('rvnm-minimal');
@@ -302,7 +302,7 @@
                     return true;
                 }
                 if (mode === 'mobile') {
-                    $(settings.wrapper).addClass('rvnm-mobile');
+                    $(settings.wrapper).addClass('rvnm-mobile-wrapper');
                     $(self).addClass('rvnm-mobile');
                     return true;
                 }
