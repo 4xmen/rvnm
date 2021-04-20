@@ -246,10 +246,10 @@
 
             // click an nav box when has rvnm-mobile class
             $(document).on('click', '.rvnm-mobile', function (e) {
-                if (e.target !== e.currentTarget && e.target.tagName != 'A')
-                    return false;
-                // try to expand menu
-                $(this).toggleClass('rvnm-mobile-expand');
+
+                if (e.target === e.currentTarget && $(e.currentTarget).hasClass('rvnm-navbar-box')) {
+                    $(this).toggleClass('rvnm-mobile-expand');
+                }
             });
 
             // on mouseenter when menu is minimal
@@ -267,7 +267,7 @@
                 $(this).removeClass('rvnm-minimal-expand');
             });
 
-            $(window).on('load',function () {
+            $(window).on('load', function () {
                 setTimeout(function () {
                     self.sizetrigger();
                 }, 100);
