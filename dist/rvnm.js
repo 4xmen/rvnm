@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.3.3
+ *  rvnm - v1.4.0
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
@@ -254,11 +254,10 @@
 
             // click an nav box when has rvnm-mobile class
             $(document).on('click', '.rvnm-mobile', function (e) {
-                console.log($(e.target).attr('href'));
-                if (e.target !== e.currentTarget && e.target.tagName != 'A' && $(e.target).attr('href') !== undefined &&  $(e.target).attr('href') == '#')
-                    return false;
-                // try to expand menu
-                $(this).toggleClass('rvnm-mobile-expand');
+
+                if (e.target === e.currentTarget && $(e.currentTarget).hasClass('rvnm-navbar-box')) {
+                    $(this).toggleClass('rvnm-mobile-expand');
+                }
             });
 
             // on mouseenter when menu is minimal
@@ -276,7 +275,7 @@
                 $(this).removeClass('rvnm-minimal-expand');
             });
 
-            $(window).on('load',function () {
+            $(window).on('load', function () {
                 setTimeout(function () {
                     self.sizetrigger();
                 }, 100);

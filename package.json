@@ -1,6 +1,6 @@
 {
   "name": "rvnm",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "Responsive vertical navigation menu",
   "main": "index.js",
   "scripts": {
