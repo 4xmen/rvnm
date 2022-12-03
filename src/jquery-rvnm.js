@@ -35,7 +35,7 @@
             responsive: true, // repsonsve mode only work in default mode
             theme: '',
             searchable: false,
-            sticky: 3,
+            sticky: 1.85,
         }, options);
 
         /**
@@ -80,7 +80,7 @@
                     let menuHeight = $(self).find('> ul').height() ;
 
                     if (menuHeight / 2 < $(window).scrollTop()){
-                        $(self).find('> ul').css('top', $(window).scrollTop() - (menuHeight / settings.sticky)  + 'px');
+                        $(self).find('> ul').css('top', ($(window).scrollTop() - menuHeight ) + (menuHeight / settings.sticky)  + 'px');
                     }else{
                         $(self).find('> ul').css('top',0);
                     }
@@ -99,6 +99,7 @@
 
         // set plugn selector to self for use in other place of plugin
         var self = this;
+        var lastScroll = 0;
 
         this.each(function () {
             // add rvnm-navbar-box to menu
@@ -263,6 +264,15 @@
 
                 if (e.target === e.currentTarget && $(e.currentTarget).hasClass('rvnm-navbar-box')) {
                     $(this).toggleClass('rvnm-mobile-expand');
+
+                    // go top and restore postion
+                   if ($(this).hasClass('rvnm-mobile-expand')){
+                       lastScroll = $(window).scrollTop();
+                       window.scrollTo({top: 0, behavior: 'smooth'});
+                   }else {
+                       console.log(lastScroll);
+                       window.scrollTo({top: lastScroll, behavior: 'smooth'});
+                   }
                 }
             });
 

@@ -1,5 +1,5 @@
 /*
- *  rvnm - v1.4.0
+ *  rvnm - v1.5.0
  *  Responsive vertical navigation menu
  *  https://github.com/4xmen/rvnm#readme
  *
@@ -43,6 +43,7 @@
             responsive: true, // repsonsve mode only work in default mode
             theme: '',
             searchable: false,
+            sticky: 1.85,
         }, options);
 
         /**
@@ -53,6 +54,7 @@
         this.sizetrigger = function () {
             // repsonvive mode controller
             if (settings.responsive && settings.mode === 'default') {
+
                 // if window size between 450 and 768 active minimal
                 if ($(window).width() > 450 && $(window).width() < 768) {
                     if (!$(self).hasClass('rvnm-minimal')) {
@@ -80,6 +82,18 @@
                     $(settings.wrapper).removeClass('rvnm-mobile-wrapper');
                     $(self).removeClass('rvnm-mobile');
                 }
+
+                // grater than mobile
+                if ($(window).width() > 450) {
+                    let menuHeight = $(self).find('> ul').height() ;
+
+                    if (menuHeight / 2 < $(window).scrollTop()){
+                        $(self).find('> ul').css('top', ($(window).scrollTop() - menuHeight ) + (menuHeight / settings.sticky)  + 'px');
+                    }else{
+                        $(self).find('> ul').css('top',0);
+                    }
+
+                }
             }
             $(".rvnm-navbar-box").css('height', '');
             if (settings.mode !== 'mobile' && !$(self).hasClass('rvnm-mobile')) {
@@ -93,6 +107,7 @@
 
         // set plugn selector to self for use in other place of plugin
         var self = this;
+        var lastScroll = 0;
 
         this.each(function () {
             // add rvnm-navbar-box to menu
@@ -257,6 +272,15 @@
 
                 if (e.target === e.currentTarget && $(e.currentTarget).hasClass('rvnm-navbar-box')) {
                     $(this).toggleClass('rvnm-mobile-expand');
+
+                    // go top and restore postion
+                   if ($(this).hasClass('rvnm-mobile-expand')){
+                       lastScroll = $(window).scrollTop();
+                       window.scrollTo({top: 0, behavior: 'smooth'});
+                   }else {
+                       console.log(lastScroll);
+                       window.scrollTo({top: lastScroll, behavior: 'smooth'});
+                   }
                 }
             });
 
