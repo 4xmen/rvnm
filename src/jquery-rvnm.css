@@ -58,6 +58,8 @@ body,html{
     min-height: 50vh;
     overflow-y: hidden;
     z-index: 99;
+    transition: 313ms;
+    transition-delay: 500ms;
 }
 
 .rvnm-wrapper{
@@ -121,19 +123,23 @@ body,html{
 
 
 .rvnm-navbar-box ul li a,.rvnm-navbar-box ul li a:visited{
-    display: block;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 14px;
     font-weight: 100;
     color: #333 ;
     position: relative;
     height: 45px;
+    white-space: nowrap;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing:border-box;
     line-height: 2em;
     overflow: hidden;
     text-overflow: ellipsis;
+
 
 }
 

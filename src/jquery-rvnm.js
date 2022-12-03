@@ -35,6 +35,7 @@
             responsive: true, // repsonsve mode only work in default mode
             theme: '',
             searchable: false,
+            sticky: 3,
         }, options);
 
         /**
@@ -45,6 +46,7 @@
         this.sizetrigger = function () {
             // repsonvive mode controller
             if (settings.responsive && settings.mode === 'default') {
+
                 // if window size between 450 and 768 active minimal
                 if ($(window).width() > 450 && $(window).width() < 768) {
                     if (!$(self).hasClass('rvnm-minimal')) {
@@ -71,6 +73,18 @@
                     $(self).removeClass('rvnm-minimal');
                     $(settings.wrapper).removeClass('rvnm-mobile-wrapper');
                     $(self).removeClass('rvnm-mobile');
+                }
+
+                // grater than mobile
+                if ($(window).width() > 450) {
+                    let menuHeight = $(self).find('> ul').height() ;
+
+                    if (menuHeight / 2 < $(window).scrollTop()){
+                        $(self).find('> ul').css('top', $(window).scrollTop() - (menuHeight / settings.sticky)  + 'px');
+                    }else{
+                        $(self).find('> ul').css('top',0);
+                    }
+
                 }
             }
             $(".rvnm-navbar-box").css('height', '');

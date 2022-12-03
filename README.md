@@ -118,13 +118,13 @@ $(function () {
 # option and events
 
 ### `wrapper`
- is main body of site default is `#wrapper`
+ is main body container of site default is `#wrapper`
  
  ### `mode`
- mode of menu can be (default = desktop| minimal = tablet | mobile)
+ Mode of menu can be (default = desktop| minimal = tablet | mobile)
  
  ### `theme`
- theme of the menu default is `""` and this a light theme other themes:
+Theme of the menu default is `""` and this a light theme other themes:
  - `dark`
  - `dark-lesb` dark & pink
  - `dark-doder` dark & blue
@@ -133,7 +133,11 @@ $(function () {
  
  ### `searchable` 
  
- you can use searchable menu but default is `false`
+You can use searchable menu but default is `false`
+ 
+ ### `sticky` 
+
+Sticky ratio default is `3`
  
  # screenshot
  
