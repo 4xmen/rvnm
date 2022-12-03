@@ -49,6 +49,7 @@ body,html{
 }
 
 .rvnm-navbar-box{
+    font-family: Vazirmatn, sans-serif;
     position: absolute;
     left: 0px;
     top:0;
@@ -87,7 +88,7 @@ body,html{
 .rvnm-navbar-box ul li ul{
     overflow: hidden;
     display: none;
-    padding-left: 10px;
+    padding-left: 2px;
 }
 
 .rvnm-navbar-box .fa{
@@ -126,14 +127,14 @@ body,html{
     font-weight: 100;
     color: #333 ;
     position: relative;
-    overflow: hidden;
     height: 45px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing:border-box;
-    line-height: 1.75em;
+    line-height: 2em;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
 
 .rvnm-navbar-box ul li:hover a,.rvnm-navbar-box ul li:hover a:visited{
@@ -168,6 +169,7 @@ body,html{
 .rvnm-navbar-box ul li.rvnm-collapseable > ul{
 
 }
+
 
 
 /*minmal mode*/
@@ -394,7 +396,7 @@ body,html{
     color: rgb(150, 162, 180);
     padding-top: 15px ;
     padding-bottom: 15px;
-    font-weight: 700;
+    font-weight: 300;
 }
 
 .rvnm-navbar-box.dark-ruby ul li span.spliter{
