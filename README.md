@@ -137,7 +137,7 @@ You can use searchable menu but default is `false`
  
  ### `sticky` 
 
-Sticky ratio default is `3`
+Sticky ratio default is `1.85`
  
  # screenshot
  
